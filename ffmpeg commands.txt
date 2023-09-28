@@ -1,0 +1,8 @@
+Add fade-in, fade-out:
+
+ffmpeg -i gen_intro2.mp4 -vf "fade=t=in:st=0:d=4,fade=t=out:st=705:d=4" -c:a copy gen_intro2_fade.mp4
+
+
+Add text:
+
+ffmpeg -i .\Staging\gen_intro4.mp4 -vf "drawtext=text='Genesis Intro4' :font='Calibri' :fontcolor=white :fontsize=30 :x=60 :y=30" -c:a copy .\withVerse\gen_intro4.mp4
